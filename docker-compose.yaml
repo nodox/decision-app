@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+
+  decision_app:
+    build: .
+    container_name: decision_app
+    command: npm run dev
+    volumes:
+      - .:/app/
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    environment:
+      MONGO_DATABASE_URL: mongodb://mongodb:27017/decision_app
+    depends_on:
+      - mongodb
+  
+  mongodb:
+    image: mongo:4.1
+    container_name: mongodb
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - 27017:27017
+
+volumes:
+  data-volume:
