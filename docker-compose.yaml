@@ -1,14 +1,13 @@
 version: "3.7"
 services:
 
-  decision_app:
+  decisions_express:
     build: 
-      context: .
-      dockerfile: Dockerfile.dev
-    container_name: decision_app
+      context: ./decisions-express
+    container_name: decision_express
     command: npm run dev
     volumes:
-      - .:/app/
+      - ./decisions-express:/app/
       - /app/node_modules
     ports:
       - 3000:3000
