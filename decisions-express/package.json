@@ -6,6 +6,7 @@
     "start": "node ./bin/www",
     "dev": "DEBUG=express:* node_modules/.bin/nodemon ./bin/www"
   },
+  "license": "GPLv3",
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",

@@ -21,7 +21,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "GPLv3",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop --host 0.0.0.0",
