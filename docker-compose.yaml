@@ -1,10 +1,10 @@
 version: "3.7"
 services:
 
-  decisions_express:
+  decisions-express:
     build: 
       context: ./decisions-express
-    container_name: decision_express
+    container_name: decision-express
     command: npm run dev
     volumes:
       - ./decisions-express:/app/
@@ -16,10 +16,10 @@ services:
     depends_on:
       - mongodb
 
-  decisions_gatsby:
+  decisions-gatsby:
     build: 
       context: ./decisions-gatsby
-    container_name: decision_gatsby
+    container_name: decision-gatsby
     command: npm run develop
     volumes:
       - ./decisions-gatsby:/app/
