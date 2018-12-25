@@ -5,9 +5,10 @@ services:
     build: 
       context: ./decisions-express
     container_name: decision-express
-    command: npm run dev
+    command: npm run develop
+    restart: always
     volumes:
-      - ./decisions-express:/app/
+      - ./decisions-express:/app_express
       - /app/node_modules
     ports:
       - 3000:3000
@@ -21,8 +22,9 @@ services:
       context: ./decisions-gatsby
     container_name: decision-gatsby
     command: npm run develop
+    restart: always
     volumes:
-      - ./decisions-gatsby:/app/
+      - ./decisions-gatsby:/app_gatsby
       - /app/node_modules
     ports:
       - 8000:8000
@@ -30,6 +32,7 @@ services:
   mongodb:
     image: mongo:4.1
     container_name: mongodb
+    restart: always
     volumes:
       - data-volume:/data/db
     ports:
