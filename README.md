@@ -12,3 +12,9 @@
 
 ## Search engine
 - Use Elasticsearch as the document store
+
+
+
+
+## Messaging Example
+https://www.zeolearn.com/magazine/background-processing-in-node-js
