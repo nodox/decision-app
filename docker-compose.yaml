@@ -37,6 +37,7 @@ services:
       - "4222"
     restart: always
     ports:
+      - "4222:4222"
       - "8222:8222"
 
   mongodb:
