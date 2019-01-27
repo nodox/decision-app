@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nats": "^1.2.2"
+    "nats": "^1.2.2",
+    "nodemailer": "^5.1.1"
   }
 }
