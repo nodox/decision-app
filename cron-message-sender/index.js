@@ -27,4 +27,4 @@ cron.schedule("* * * * *", function() {
 
 // TODO: keeps the connection open until 
 
-app.listen("3128")
+app.listen(process.env.PORT || 3124)

@@ -29,7 +29,8 @@ async function main() {
   };
 
   // send mail with defined transport object
-  let info = await transporter.sendMail(mailOptions)
+  let transportPromise = transporter.sendMail(mailOptions)
+  let info = await transportPromise
 
   console.log("Message sent: %s", info.messageId);
   // Preview only available when sending through an Ethereal account
