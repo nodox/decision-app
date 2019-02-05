@@ -14,10 +14,14 @@ const DecisionsGrid = styled.div`
   grid-template-columns: auto;
   grid-gap: 2rem;
 
+  padding-left: 8.5rem;  
+  padding-right: 8.5rem;  
+  
+
   text-align: center;
   text-transform: capitalize;
 
-  margin-top: 40px;
+  margin-top: 2rem;
 
   @media (min-width: 768px) {
     grid-template-columns: auto auto auto;
@@ -28,10 +32,11 @@ const DecisionsGrid = styled.div`
 const DecisionsGridCell = styled(Cell)`
   div {
     display: block;
-
-    background: green;
-    
+    width: 100%;
+    background: #06aa06;
+    border-radius: 9px;
     color: white;
+    box-shadow: 0.165rem 0.165rem 0.375rem #000;
   }
 `
 
@@ -79,13 +84,15 @@ export default class IndexPage extends React.Component {
               console.log(obj)
               return (
                 <DecisionsGridCell key={idx}>
-                  <div>{obj.decisionMaker}</div>
-                  <div>{obj.description}</div>
-                  <div>{obj.email}</div>
-                  <div>{obj.endDate}</div>
-                  <div>{obj.name}</div>
-                  <div>{obj.outcome}</div>
-                  <div>{obj.startDate}</div>
+                  <div>
+                    {obj.decisionMaker}<br></br>
+                    {obj.description}<br></br>
+                    {obj.email}<br></br>
+                    {obj.endDate}<br></br>
+                    {obj.name}<br></br>
+                    {obj.outcome}<br></br>
+                    {obj.startDate}<br></br>
+                  </div>
                 </DecisionsGridCell>
               )
             })}
