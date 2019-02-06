@@ -40,6 +40,14 @@ services:
       - "4222:4222"
       - "8222:8222"
 
+  redis:
+    image: redis
+    container_name: redis
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"
+
   mongodb:
     image: mongo:4.1
     container_name: mongodb
